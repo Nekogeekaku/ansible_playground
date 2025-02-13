@@ -1,0 +1,17 @@
+version: '3'
+services:
+      ansible:
+        container_name: ansible
+        image: ansible-server
+        volumes:
+          - ./ansible-projects:/projects
+        tty: true
+        stdin_open: true
+      remote-host-one:
+        container_name: remote-host-one
+        image: remote-host-ssh
+        environment:
+          SSH_USERNAME: myuser
+          SSH_PASSWORD: mysecretpassword
+networks:
+      net:

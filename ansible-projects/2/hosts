@@ -1,0 +1,2 @@
+[test-machine]
+remote-host-one ansible_ssh_pass='mypassword' ansible_ssh_user='myroot'
